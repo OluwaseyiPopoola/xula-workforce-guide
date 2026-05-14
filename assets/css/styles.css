@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar {
+  background-color: #201f1f;
+  padding: 1vw 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo Styling */
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #e1c828;
+}
+
+.logo-link {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 50px;
+  cursor: pointer;
+  height: auto;
+  margin-right: 0.75rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+/* Navigation Links */
+.navigation-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navigation-links li a {
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease; /* Snappier feel */
+  position: relative;
+}
+
+/* Hover & Active States */
+.navigation-links li a:hover,
+.navigation-links li a.active {
+  color: #e1c828;
+}
+
+/* Subtle underline effect on hover */
+.navigation-links li a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 0;
+  background-color: #e1c828;
+  transition: width 0.3s ease;
+}
+
+.navigation-links li a:hover::after,
+.navigation-links li a.active::after {
+  width: 100%;
+}
