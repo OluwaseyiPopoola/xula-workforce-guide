@@ -15,11 +15,11 @@ a {
 }
 
 .navbar {
-  background-color: #201f1f;
   padding: 1vw 8vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Logo Styling */
@@ -27,7 +27,7 @@ a {
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 1px;
-  color: #e1c828;
+  color: rgb(21, 21, 100);
 }
 
 .logo-link {
@@ -55,15 +55,18 @@ a {
 }
 
 .navigation-links li a {
-  color: #ffffff;
+  color: rgb(21, 21, 100);
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: 16px;
   transition: all 0.3s ease; /* Snappier feel */
   position: relative;
 }
 
 /* Hover & Active States */
-.navigation-links li a:hover,
+.navigation-links li a:hover {
+  color: #e1c828;
+}
+
 .navigation-links li a.active {
   color: #e1c828;
 }
@@ -73,14 +76,14 @@ a {
   content: "";
   position: absolute;
   width: 0;
-  height: 2px;
   bottom: -5px;
   left: 0;
+  height: 2px;
   background-color: #e1c828;
   transition: width 0.3s ease;
 }
 
 .navigation-links li a:hover::after,
-.navigation-links li a.active::after {
+.navigation-links li a:active::after {
   width: 100%;
 }
