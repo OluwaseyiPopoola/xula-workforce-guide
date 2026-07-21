@@ -65,35 +65,14 @@
           experience at XULA with ease.
         </p>
         <div class="typing-text-container">
-          <span class="text"></span>
+          <span id="typing-text"></span>
         </div>
-
-        <script>
-          const text = document.querySelector(".text");
-
-          const textLoad = () => {
-            setTimeout(() => {
-              text.textContent = "Learn how to use TCP for timekeeping";
-            }, 0);
-
-            setTimeout(() => {
-              text.textContent =
-                "Complete required student hiring forms (e.g, W-4, I-9, etc.)";
-            }, 15000);
-
-            setTimeout(() => {
-              text.textContent =
-                "Check out the payroll process for the next pay date, and more.";
-            }, 30000);
-          };
-
-          textLoad();
-          setInterval(textLoad, 45000);
-        </script>
 
         <a href="/pages/tcp.html" class="btn-link">Get Started With TCP</a>
       </section>
     </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
+    <script src="/assets/js/typing_animation.js"></script>
   </body>
 </html>
 
