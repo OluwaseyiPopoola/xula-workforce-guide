@@ -28,9 +28,8 @@
     gap: 2rem;
   }
 
-  #tcp-intro .text-content {
-    justify-content: center;
-    text-align: center;
+  #tcp-intro .text-content p {
+    display: none;
   }
 }
 
@@ -45,4 +44,53 @@
   font-size: 2.5vw;
   font-weight: 800;
   color: rgba(0, 0, 0, 0.689);
+}
+
+#tcp-operations {
+  padding: 2rem 2.5vw;
+}
+
+#links-intro p {
+  font-size: 1.25rem;
+  margin-block: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+#tcp-operations-links {
+  display: grid;
+  /* Creates 2 equal columns on wider screens */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.tcp-operation {
+  display: block;
+  padding: 1.5rem;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.tcp-operation:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-color: var(--xula-gold-color);
+}
+
+.tcp-operation p {
+  font-size: 0.95rem;
+  color: #555555;
+  line-height: 1.4;
+}
+
+@media (max-width: 700px) {
+  #tcp-operations-links {
+    /* Switches to a single column layout on screens under 700px */
+    grid-template-columns: 1fr;
+  }
 }
