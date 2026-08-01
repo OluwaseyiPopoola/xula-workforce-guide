@@ -74,53 +74,80 @@
         </article>
       </section>
       <section id="tcp-operations">
-        <div id="links-intro">
-          <p>
-            Welcome to the Xavier University TimeClock Plus (TCP) training
-            center. <br />Follow our interactive step-by-step guides to master
-            common operations.
-          </p>
-        </div>
+        <article id="tcp-operations-btns">
+          <button
+            class="tcp-operation-btn"
 
-        <article id="tcp-operations-links">
-          <a
-            class="tcp-operation"
-            href="tcp-operations-pages/clock-in-clock-out.html"
           >
             <h2>Clock In</h2>
             <p>Learn how to clock in for your shift and avoid losing hours</p>
-          </a>
+          </button>
 
-          <a
-            class="tcp-operation"
-            href="tcp-operations-pages/leave-on-break.html"
+          <button
+            class="tcp-operation-btn"
           >
             <h2>How to Leave on Break</h2>
             <p>
               Record your breaks to keep your schedule on track with your times
             </p>
-          </a>
-          <a
-            class="tcp-operation"
-            href="tcp-operations-pages/return-from-break.html"
+          </button>
+          <button
+            class="tcp-operation-btn"
           >
             <h2>How to Return from Break</h2>
             <p>Return from breaks on tcp to avoid losing working hours</p>
-          </a>
-          <a
-            class="tcp-operation"
-            href="tcp-operations-pages/change-position-job-code.html"
+          </button>
+          <button
+            class="tcp-operation-btn"
           >
             <h2>How to Change Position / Job Code</h2>
             <p>
               Learn how to switch jobs to ensure recording hours for thr right
               job
             </p>
-          </a>
+          </button>
         </article>
       </section>
+      <article id="tcp-steps" class="steps-container">
+  
+        <header class="steps-header">
+          <button id="back-hub-btn" class="back-btn">
+            &#8592; Back to the hub
+          </button>
+          <h2 id="operation-title"></h2>
+        </header>
+
+        <div class="steps-box">
+          
+          <nav class="operation-steps" id="steps-nav">
+            </nav>
+
+          <section class="step-overview">
+            <p id="step-no" class="step-badge"></p>
+            <h3 id="step-title"></h3>
+
+            <div class="step-text-img-container">
+              <p id="step-description"></p>
+              <figure class="step-media">
+                <img id="step-img" src="" alt="Step diagram or illustration" />
+              </figure>
+            </div>
+
+            <hr/>
+
+            <footer class="step-move-btn">
+              <button id="prev-step-btn">Previous</button>
+              <button id="next-step-btn">Next</button>
+            </footer>
+          </section>
+
+        </div>
+
+      </article>
     </main>
-    <!-- <footer>
+
+
+    <footer>
       <section id="outro-links">
         <article id="outro-summary">
           <a href="/pages/index.html" class="logo">
@@ -160,7 +187,7 @@
         <p>
           &copy; 2024 Xavier University of Louisiana. All rights reserved.
         </p>
-    </footer> -->
+    </footer>
 
     <script src="../assets/js/sidebar.js"></script>
   </body>
