@@ -50,47 +50,66 @@
   padding: 2rem 2.5vw;
 }
 
-#links-intro p {
-  font-size: 1.25rem;
-  margin-block: 1rem;
-  color: rgba(0, 0, 0, 0.7);
-}
-
-#tcp-operations-links {
-  display: grid;
-  /* Creates 2 equal columns on wider screens */
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+#tcp-operations-btns {
+  display: flex;
+  flex-wrap: wrap; /* Allows cards to drop to the next line as space shrinks */
+  justify-content: space-around; /* Centers the cards nicely */
   gap: 1.5rem;
 }
 
-.tcp-operation {
-  display: block;
-  padding: 1.5rem;
-  background-color: #ffffff;
-  border: 1px solid #e0e0e0;
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
+.tcp-operation-btn {
+  /* Enforces a square aspect ratio */
+  width: 220px;
+  height: 220px;
+  aspect-ratio: 1 / 1;
+
+  /* Flex layout to center content inside the square */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  padding: 1.25rem;
+  background-color: var(--xula-gold-color);
+  border: 1px solid black;
+  border-radius: 15px;
+  cursor: pointer;
+
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    border-color 0.2s ease;
 }
 
-.tcp-operation:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+.tcp-operation-btn h2 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.tcp-operation-btn p {
+  font-size: 1.1rem;
+  color: #555555;
+  line-height: 1.3;
+}
+
+.tcp-operation-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   border-color: var(--xula-gold-color);
 }
 
-.tcp-operation p {
-  font-size: 0.95rem;
-  color: #555555;
-  line-height: 1.4;
+/* Responsive adjustment for small screens */
+@media (max-width: 500px) {
+  .tcp-operation-btn {
+    /* Expands to almost full width while remaining square on small phones */
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    aspect-ratio: 1 / 1;
+  }
 }
 
-@media (max-width: 700px) {
-  #tcp-operations-links {
-    /* Switches to a single column layout on screens under 700px */
-    grid-template-columns: 1fr;
-  }
+#tcp-steps {
+  height: 100vh;
 }
