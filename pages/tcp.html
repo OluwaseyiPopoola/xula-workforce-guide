@@ -108,44 +108,87 @@
           </button>
         </article>
       </section>
-      <article id="tcp-steps" class="steps-container">
-  
-        <header class="steps-header">
-          <button id="back-hub-btn" class="back-btn">
-            &#8592; Back to the hub
-          </button>
-          <h2 id="operation-title"></h2>
+      <article id="tcp-steps">
+        <header id="steps-header">
+          <button id="back-to-hub-btn">&#8592; Back to the hub</button>
+          <h2 id="operation-title">How to Clock In/Out</h2>
         </header>
 
-        <div class="steps-box">
-          
-          <nav class="operation-steps" id="steps-nav">
-            </nav>
+        <div id="steps-box">
+          <nav id="steps-nav">
+            <ul>
+              <li class="completed">
+                <span class="step-number">1</span>
+                <span class="step-text">Log In</span>
+                <span class="step-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </span>
+              </li>
 
-          <section class="step-overview">
-            <p id="step-no" class="step-badge"></p>
-            <h3 id="step-title"></h3>
+              <li class="completed">
+                <span class="step-number">2</span>
+                <span class="step-text">Select 'Clock In'</span>
+                <span class="step-check">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                </span>
+              </li>
 
-            <div class="step-text-img-container">
-              <p id="step-description"></p>
-              <figure class="step-media">
-                <img id="step-img" src="" alt="Step diagram or illustration" />
-              </figure>
+              <li class="active">
+                <span class="step-number">3</span>
+                <span class="step-text">Verify Position</span>
+                <span class="step-check"></span>
+              </li>
+
+              <li>
+                <span class="step-number">4</span>
+                <span class="step-text">Confirmation</span>
+                <span class="step-check"></span>
+              </li>
+
+              <li>
+                <span class="step-number">5</span>
+                <span class="step-text">Clocking Out</span>
+                <span class="step-check"></span>
+              </li>
+            </ul>
+          </nav>
+
+          <section id="step-overview">
+            <div class="step-content-top">
+              <p id="step-no" class="step-badge">STEP 3 OF 5</p>
+
+              <h2 id="step-title">Verify Position</h2>
+
+              <div class="step-text-img-container">
+                <div class="step-text-column">
+                  <p id="step-description">
+                    If you have multiple roles, select the correct position for your current shift.
+                  </p>
+
+                  <div class="step-tip-box">
+                    <div class="tip-icon">&#9654;</div>
+                    <p><strong>Pro-tip:</strong> Double check your Employee ID before logging on to avoid lockouts.</p>
+                  </div>
+                </div>
+
+                <figure class="step-media">
+                  <img id="step-img" src="../assets/img/phone-mockup.png" alt="Phone interface illustration" />
+                </figure>
+              </div>
             </div>
 
-            <hr/>
-
             <footer class="step-move-btn">
-              <button id="prev-step-btn">Previous</button>
-              <button id="next-step-btn">Next</button>
+              <button id="prev-step-btn" class="btn-secondary">Previous</button>
+              <button id="next-step-btn" class="btn-primary">Next Step</button>
             </footer>
           </section>
-
         </div>
-
       </article>
     </main>
-
 
     <footer>
       <section id="outro-links">
