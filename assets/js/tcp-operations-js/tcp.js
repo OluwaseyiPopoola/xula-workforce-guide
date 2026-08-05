@@ -205,4 +205,37 @@ const stepNoEl = document.getElementById('step-no');
 const stepTitleEl = document.getElementById('step-title');
 const stepDescriptionEl = document.getElementById('step-description');
 const stepImgEl = document.getElementById('step-img');
-const stepTipBox = document.querySelector('.step-tip-box');
+
+
+const operations = ["clock-in", "leave-break", "return-=break", "change-position"];
+
+function showHubView() {
+  introSection.style.display = 'flex';
+  operationsSection.style.display = 'block';
+  stepsArticle.style.display = 'none';
+}
+
+function showStepsView() {
+  introSection.style.display = 'none';
+  operationsSection.style.display = 'none';
+  stepsArticle.style.display = 'block';
+}
+
+OperationBtns.forEach((btn, index) => {
+  btn.addEventListener('click', () => {
+    currentOperationKey = operations[index];
+    currentStepIndex = 0;
+    showStepsView();
+    renderCurrentStep();
+  });
+
+});
+
+backToHubBtn.addEventListener("click", () => {
+  showHubView();
+});
+
+showHubView();
+
+
+
