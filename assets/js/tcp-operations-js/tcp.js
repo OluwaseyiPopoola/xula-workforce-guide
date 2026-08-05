@@ -257,7 +257,7 @@ function showStepsView() {
   stepsArticle.style.display = 'block';
 }
 
-OperationBtns.forEach((btn, index) => {
+operationBtns.forEach((btn, index) => {
   btn.addEventListener('click', () => {
     currentOperationKey = operations[index];
     currentStepIndex = 0;
@@ -272,6 +272,105 @@ backToHubBtn.addEventListener("click", () => {
 });
 
 showHubView();
+
+// Part 4: Dynamic Rendering & Navigation Logic
+
+// SVG icon string for completed checkmarks
+const checkmarkSVG = `
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+  </svg>
+`;
+
+// Render function: Rebuilds sidebar list and updates step details
+function renderCurrentStep() {
+  const currentOp = tcpOperationsData[currentOperationKey];
+  console.log("Rendering step:", currentStepIndex, "of operation:", currentOperationKey);
+  if (!currentOp) return;
+
+  // 1. Update operation main header
+  operationTitleEl.textContent = currentOp.title;
+
+  // 2. Render left sidebar step list
+  stepsNavUl.innerHTML = ""; // Clear static HTML items
+
+  currentOp.steps.forEach((step, index) => {
+    const li = document.createElement("li");
+
+    // Add active/completed classes
+    if (index < currentStepIndex) {
+      li.classList.add("completed");
+    } else if (index === currentStepIndex) {
+      li.classList.add("active");
+    }
+
+    // Build sidebar item structure
+    li.innerHTML = `
+      <span class="step-number">${index + 1}</span>
+      <span class="step-text">${step.title}</span>
+      <span class="step-check">${index < currentStepIndex ? checkmarkSVG : ""}</span>
+    `;
+
+    // Allow clicking any sidebar step directly to jump to it
+    li.addEventListener("click", () => {
+      currentStepIndex = index;
+      renderCurrentStep();
+    });
+
+    stepsNavUl.appendChild(li);
+  });
+
+  // 3. Render right-side step details
+  const activeStep = currentOp.steps[currentStepIndex];
+  const totalSteps = currentOp.steps.length;
+
+  stepNoEl.textContent = `STEP ${currentStepIndex + 1} OF ${totalSteps}`;
+  stepTitleEl.textContent = activeStep.title;
+  stepDescriptionEl.textContent = activeStep.description;
+
+  // Hide image container if image is null
+  if (activeStep.image) {
+    stepImgEl.src = activeStep.image;
+    stepImgEl.parentElement.style.display = "block";
+  } else {
+    stepImgEl.parentElement.style.display = "none";
+  }
+
+  // 4. Update Previous / Next button states
+  if (currentStepIndex === 0) {
+    prevStepBtn.style.opacity = "0.5";
+    prevStepBtn.style.cursor = "not-allowed";
+  } else {
+    prevStepBtn.style.opacity = "1";
+    prevStepBtn.style.cursor = "pointer";
+  }
+
+  if (currentStepIndex === totalSteps - 1) {
+    nextStepBtn.textContent = "Finish";
+  } else {
+    nextStepBtn.textContent = "Next Step";
+  }
+}
+
+// Next Step / Finish Button Handler
+nextStepBtn.addEventListener("click", () => {
+  const currentOp = tcpOperationsData[currentOperationKey];
+  if (currentStepIndex < currentOp.steps.length - 1) {
+    currentStepIndex++;
+    renderCurrentStep();
+  } else {
+    // Return to main hub if "Finish" is clicked on final step
+    showHubView();
+  }
+});
+
+// Previous Step Button Handler
+prevStepBtn.addEventListener("click", () => {
+  if (currentStepIndex > 0) {
+    currentStepIndex--;
+    renderCurrentStep();
+  }
+});
 
 
 
