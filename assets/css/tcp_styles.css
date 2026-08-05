@@ -4,7 +4,7 @@
   --nav-link-color: rgb(21, 21, 100);
   --xula-gold-color: #e1c828;
   --white-background-color: whitesmoke;
-  --xula-gold-hover: #e6b400;
+  --xula-gold-hover: #d3af2f;
   --card-bg: #ffffff;
   --border-color: #f0f0f0;
   --text-dark: #111827;
@@ -122,10 +122,8 @@
 }
 
 #tcp-steps {
-  height: 100vh;
   padding: 2rem 2.5vw;
   padding-top: 85px;
-  border: 1px solid rgba(201, 21, 21, 0.2);
 }
 
 #back-to-hub-btn {
@@ -302,4 +300,49 @@
   max-width: 100%;
   height: auto;
   border-radius: 12px;
+}
+
+.step-move-btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+}
+
+.btn-secondary {
+  background: transparent;
+  border: none;
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+  padding: 0.6rem 1.2rem;
+}
+
+.btn-primary {
+  background-color: var(--xula-gold-color);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  color: var(--text-dark);
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--xula-gold-hover);
+}
+
+@media (max-width: 850px) {
+  #steps-box {
+    flex-direction: column;
+  }
+  #steps-nav {
+    flex: auto;
+    width: 100%;
+  }
+  .step-text-img-container {
+    flex-direction: column;
+  }
 }
