@@ -47,6 +47,42 @@ const tcpOperationsData = {
       }
     ]
   },
+
+  "clock-out": {
+    title: "How To Clock Out",
+    steps: [
+      {
+        title: "Enter ID",
+        description: "Enter your employee ID number in the ID Number Field",
+        image: null
+      },
+      {
+        title: "Clock Out",
+        description: "Press the Blue 'Clock Out' button",
+        image: null
+      },
+      {
+        title: "Confirm Name",
+        description: "Confirm your correct first and last name show on the clock",
+        image: null
+      },
+      {
+        title: "Continue",
+        description: "Press the 'Continue' button",
+        image: null
+      },
+      {
+        title: "Confirm Operation",
+        description: "Press the 'OK' button on the clock operation confirmation screen",
+        image: null
+      },
+      {
+        title: "Success",
+        description: "You are now Clocked Out!",
+        image: null
+      }
+    ]
+  },
   
   "leave-break": {
     title: "How To Leave on Break",
