@@ -243,7 +243,7 @@ const stepDescriptionEl = document.getElementById('step-description');
 const stepImgEl = document.getElementById('step-img');
 
 
-const operations = ["clock-in", "leave-break", "return-=break", "change-position"];
+const operations = ["clock-in", "clock-out", "leave-break", "return-from-break", "change-position"];
 
 function showHubView() {
   introSection.style.display = 'flex';
