@@ -176,3 +176,33 @@ const tcpOperationsData = {
     ]
   }
 };
+
+
+// Part 2: DOM Selection & State Management
+
+// --- State Variables ---
+// These keep track of which operation the user clicked and what step they are on
+let currentOperationKey = null; 
+let currentStepIndex = 0; 
+
+// --- Section Elements ---
+// The main containers we will hide and show
+const introSection = document.getElementById('tcp-introduction');
+const operationsSection = document.getElementById('tcp-operations');
+const stepsArticle = document.getElementById('tcp-steps');
+
+// --- Button Elements ---
+const operationBtns = document.querySelectorAll('.tcp-operation-btn');
+const backToHubBtn = document.getElementById('back-to-hub-btn');
+const prevStepBtn = document.getElementById('prev-step-btn');
+const nextStepBtn = document.getElementById('next-step-btn');
+
+// --- Dynamic Content Elements ---
+// The specific tags where we will inject our text and HTML
+const operationTitleEl = document.getElementById('operation-title');
+const stepsNavUl = document.querySelector('#steps-nav ul');
+const stepNoEl = document.getElementById('step-no');
+const stepTitleEl = document.getElementById('step-title');
+const stepDescriptionEl = document.getElementById('step-description');
+const stepImgEl = document.getElementById('step-img');
+const stepTipBox = document.querySelector('.step-tip-box');
