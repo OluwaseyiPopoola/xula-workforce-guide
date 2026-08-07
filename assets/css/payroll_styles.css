@@ -16,10 +16,8 @@ main{
 
 @media (max-width: 700px) {
   #payroll-intro {
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-  }
+    justify-content: center;
+  } 
 
   #payroll-intro .text-content p {
     display: none;
@@ -68,3 +66,60 @@ main{
 
   }
 }
+
+#calendar-alert-table {
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-top: 2rem;
+  
+}
+
+#calendar-alert{
+    flex: 0 0 300px;
+    padding: 1rem;
+    padding-block: 1.5rem;  
+    border-radius: 20px;
+    background-color: gold;
+}
+
+.square-icon-wrapper {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+}
+
+.circle {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid black; 
+}
+
+#calendar-alert h3 {
+    margin-top: 1rem;
+}
+
+#calendar-alert ul li {
+    list-style: none;
+    padding: 0.5rem;
+    margin: 1rem;
+}
+
+.deadline {
+    display: block;
+    margin-top: 0.3rem;
+    padding: 0.3rem;
+    font-weight: 600;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
