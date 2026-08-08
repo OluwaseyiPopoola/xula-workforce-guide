@@ -1,5 +1,7 @@
 const calendarTable = document.getElementById("calendar-table")
 
+let lastPaidDate = null;
+
 const monthMap = {
   jan: 0,
   feb: 1,
@@ -45,7 +47,11 @@ for (let i = 1; i < calendarTable.rows.length; i++) {
             status.style.color = "green";
             status.style.backgroundColor = "rgba(0, 100, 0, 0.2)";
             payDate.style.color = "green";
+
+            lastPaidDateRow = calendarTable.rows[i] 
         }
     } 
 }
 
+
+lastPaidDateRow.id = "last-paid-row"
