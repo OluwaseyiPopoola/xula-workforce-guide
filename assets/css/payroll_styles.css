@@ -123,3 +123,46 @@ main{
     border-radius: 8px;
 }
 
+.table-container {
+    overflow-x: auto;
+    border: 1px solid gray;
+    border-radius: 15px;
+    display: flex; 
+}
+
+table {
+    flex-shrink: 0;
+    border-collapse: collapse; 
+    padding-block: 1rem;  
+    flex-shrink: 0;
+
+    /* overflow: hidden;   */
+}
+
+thead {
+    background-color: lightgrey;
+    border-radius: 15px;
+}
+
+.status-frame {
+    background-color: rgba(0, 100, 0, 0.1);
+    color: green;
+    font-weight: 500;
+    padding: 0.3rem 0.5rem;
+    border-radius: 40%;
+}
+
+
+
+#calendar-table th,
+#calendar-table td {
+    padding: 1rem;
+}
+
+#calendar-table th{
+    color: darkgray;
+    text-align: start;
+}
+
+
+
