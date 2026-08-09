@@ -1,0 +1,189 @@
+main {
+  padding-inline: 3vw;
+}
+
+#payroll-introduction {
+  padding-top: 85px;
+  display: flex;
+  align-items: center;
+}
+
+#payroll-intro {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+}
+
+@media (max-width: 700px) {
+  #payroll-intro {
+    justify-content: center;
+  }
+
+  #payroll-intro .text-content p {
+    display: none;
+  }
+}
+
+#payroll-intro img {
+  border-radius: 10px;
+}
+
+#payroll-intro .text-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.3vw;
+  font-weight: 800;
+  color: #000000b0;
+}
+
+#payroll-calendar-info h2 {
+  margin-top: 3rem;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#payroll-file {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+#payroll-calendar-info p {
+  margin-top: 1rem;
+  font-size: 1.3rem;
+  color: #000000b0;
+}
+
+@media (max-width: 690px) {
+  #payroll-file {
+    flex-direction: column;
+    align-items: start;
+  }
+}
+
+#calendar-alert-table {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+#calendar-alert {
+  position: sticky;
+  top: 0;
+  flex: 0 0 300px;
+  padding: 1rem;
+  padding-block: 1.5rem;
+  border-radius: 20px;
+  background-color: gold;
+}
+
+.square-icon-wrapper {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+.circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 2px solid black;
+}
+
+#calendar-alert h3 {
+  margin-top: 1rem;
+}
+
+#calendar-alert ul li {
+  list-style: none;
+  padding: 0.5rem;
+  margin: 1rem;
+}
+
+.deadline {
+  display: block;
+  margin-top: 0.3rem;
+  padding: 0.3rem;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+@media (max-width: 800px) {
+  #calendar-alert-table {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+
+  #calendar-alert {
+    position: static;
+    align-self: center;
+  }
+}
+
+.table-container {
+  overflow-x: auto;
+  border: 1px solid gray;
+  border-radius: 15px;
+  display: flex;
+  width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  padding-block: 1rem;
+  flex-shrink: 0;
+
+  /* overflow: hidden;   */
+}
+
+thead {
+  background-color: rgba(211, 211, 211, 0.4);
+  border-radius: 15px;
+}
+
+#calendar-table th,
+#calendar-table td {
+  padding: 1rem;
+}
+
+#calendar-table th {
+  color: darkgray;
+  text-align: start;
+}
+
+#calendar-table tr {
+  transform: background-color 0.5s ease-in;
+}
+
+#last-paid-row {
+  background-color: rgba(211, 211, 211, 0.4);
+}
+
+#calendar-table tr:hover {
+  background-color: rgba(211, 211, 211, 0.4);
+}
+
+#calendar-table td:nth-child(3) {
+  color: gold;
+}
+
+.status-frame {
+  background-color: rgba(255, 215, 0, 0.2);
+  color: gold;
+  font-weight: 500;
+  padding: 0.3rem 0.5rem;
+  border-radius: 15px;
+}
