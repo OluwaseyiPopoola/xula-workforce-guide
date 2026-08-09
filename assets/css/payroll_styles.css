@@ -68,6 +68,7 @@ main{
 }
 
 #calendar-alert-table {
+  position: relative;
   display: flex;
   align-items: flex-start;
   gap: 2.5rem;
@@ -76,6 +77,8 @@ main{
 }
 
 #calendar-alert{
+    position: sticky;
+    top: 0;
     flex: 0 0 300px;
     padding: 1rem;
     padding-block: 1.5rem;  
