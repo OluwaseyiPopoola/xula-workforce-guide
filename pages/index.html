@@ -8,6 +8,7 @@
     <title>The XULA Workforce Guide</title>
 
     <link rel="stylesheet" href="/assets/css/styles.css" />
+    <script src="https://alcdn.msauth.net/browser/2.38.0/js/msal-browser.min.js"></script>
   </head>
 
   <body>
@@ -133,7 +134,7 @@
           </p>
         </div>
         <div class="join-links">
-          <a href="/pages/sign-in.html" class="btn-link">Sign In Now</a>
+          <button id="signin-btn" onclick="signIn()" class="btn-link" style="cursor:pointer; border:none; font:inherit;">Sign In Now</button>
         </div>
         <div id="quadrant-2"></div>
       </section>
@@ -182,6 +183,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
     <script src="/assets/js/typing_animation.js"></script>
     <script src="/assets/js/sidebar.js"></script>
+    <script src="/assets/js/auth.js"></script>
   </body>
 </html>
 
