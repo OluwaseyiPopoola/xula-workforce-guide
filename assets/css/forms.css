@@ -1,0 +1,24 @@
+main {
+  padding-inline: 3vw;
+}
+
+#forms-introduction {
+  padding-top: 85px;
+}
+
+#forms-intro {
+  display: flex;
+  gap: 2rem;
+}
+
+#forms-intro img {
+}
+
+#forms-intro .text-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.5vw;
+  font-weight: 800;
+  color: rgba(0, 0, 0, 0.689);
+}

@@ -26,8 +26,8 @@ a {
 
 img {
   width: 100%;
+  border-radius: 15px;
 }
-
 
 .navbar {
   position: fixed;
@@ -45,7 +45,7 @@ img {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.5rem; 
+  padding: 0.5rem;
   height: 50px;
   white-space: nowrap;
   background-color: var(--xula-gold-color);
