@@ -142,8 +142,8 @@ main {
 .form-btn {
   margin-top: 0.75rem;
   display: inline-block;
-  border: 1px solid #16a34a;
-  color: #16a34a;
+  border: 1px solid var(--xula-gold-color);
+  color: var(--xula-gold-color);
   text-align: center;
   padding: 0.5rem 1rem;
   border-radius: 6px;
@@ -153,7 +153,7 @@ main {
 }
 
 .form-card:hover .form-btn {
-  background: #16a34a;
+  background: var(--xula-gold-color);
   color: #ffffff;
 }
 
